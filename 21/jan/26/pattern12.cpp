@@ -1,3 +1,8 @@
+/*  *
+   *!*
+  *!*!*
+ *!*!*!*
+*!*!*!*!**/
 #include<iostream>
 using namespace std;
 int main(){
@@ -10,7 +15,7 @@ int main(){
             if(k%2==1){
                 cout<<"*";
                         }
-                        else{\
+                        else{
                            cout<<"!";
                         }
            
