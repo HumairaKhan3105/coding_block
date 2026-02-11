@@ -1,26 +1,27 @@
 #include<iostream>
 using namespace std;
-void second_max(int arr,int n,int max1,int max2){
-       for(int i =0;i<= n;i++){
-        if(max1>arr[i]){
-            continue;
+
+int findSecondMax() {
+    int max=0;
+    int secondMax=0;
+
+    int arr[]={2,4,8,5,9,3};
+    int n = sizeof(arr)/sizeof(arr[0]);  //for identify size
+
+    for(int i=0;i<n;i++) {
+        if(arr[i]>max) {
+            secondMax=max;
+            max=arr[i];
         }
-        else if(max2>arr[i]){
-            break;
+        else if(arr[i]>secondMax && arr[i]!=max) {
+            secondMax=arr[i];
         }
-        cout<<max2;
-       }
+    }
+
+    return secondMax;
 }
 
-int main(){
-    int n;
-    cin>>n;
-    int arr[n];
-    int max1,max2;
-  for(int i =0;i<n;i++){
-            cin>>arr[i];
-       }
-       second_max(arr[], n);
-
-
+int main() {
+    cout << findSecondMax();
+    return 0;
 }
